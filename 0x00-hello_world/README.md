@@ -8,4 +8,8 @@ c preprocessor file
 
 4. Script that compiles a C file and creates an executable names cisfun
 
-5. C program that prints exactly a specif line of code
+5. C program that prints exactly a specific line of code using puts()
+
+6.  Program that prints using printf
+
+7. Program that prints the sizes of different data types
