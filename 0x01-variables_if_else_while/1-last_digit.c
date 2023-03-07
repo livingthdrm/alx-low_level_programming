@@ -3,9 +3,7 @@
 #include <stdio.h>
 
 /**
- * Description - The program takes a random number then checks the last digit
- *
- * Main - entry point of the program
+ * main - entry point of the program
  *
  * description - The program prints out the last digit of a random number
  *
