@@ -4,17 +4,11 @@
 
 /**
  * print_alphabet - print alphabet
- * Description: print alphabet in lowercase
+ * description - print alphabet in lowercase
  * Return: has no return value
  */
 
 void print_alphabet(void);
-
-/**
- * print_alphabet - prints the alphabet
- * Description: prints the alphabet in lowercase
- * Return: has no return value
- */
 
 void print_alphabet(void)
 {
