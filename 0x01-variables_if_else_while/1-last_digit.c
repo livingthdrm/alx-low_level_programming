@@ -5,11 +5,11 @@
 /**
  * Description - The program takes a random number then checks the last digit
  *
- * main: Entry point of the program
+ * main - Entry point of the program
  *
- * description: The program prints out the last digit of a random number
+ * description - The program prints out the last digit of a random number
  *
- * Return: Always (0)
+ * Return - Always (0)
  */
 
 int main(void)
