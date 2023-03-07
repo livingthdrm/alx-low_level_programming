@@ -6,7 +6,7 @@
  * print_alphabet - print alphabet
  * description - print alphabet in lowercase
  * Return: has no return value
- */
+*/
 
 void print_alphabet(void);
 
