@@ -1,10 +1,4 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 #include "main.h"
-#include <stdio.h>
-
-void positive_or_negative(int i);
 
 /**
  * largest number - returns the largest of three numbers
@@ -37,5 +31,3 @@ int largest_number(int a, int b, int c)
 
 	return (largest);
 }
-
-#endif /* MAIN_H */
