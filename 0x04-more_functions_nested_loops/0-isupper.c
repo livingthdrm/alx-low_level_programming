@@ -7,6 +7,8 @@
  * Return: 1
  */
 
+int _isupper(char c);
+
 int _isupper(char c)
 {
 	int asciiValue = (int)c;
