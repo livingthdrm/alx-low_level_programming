@@ -7,7 +7,7 @@
  *
  * Return: Result of the calculation
  */
-int _pow_recurion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
