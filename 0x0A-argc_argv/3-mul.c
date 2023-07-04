@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -54,7 +56,7 @@ int _atoi(char *s)
  * @argc - number of arguments
  * @argv - list of arguments
  *
- * return: 1 if no two arguments, 0 if more than two
+ * Return: 1 if no two arguments, 0 if more than two
  */
 int main(int argc, char **argv)
 {
