@@ -9,12 +9,10 @@
  */
 void swap_int(int *a, int *b)
 {
-	int a = *a;
-	int b = *b;
-	int temp;
-	temp = a;
-	a = b;
-	b = temp;
+	int *tmp;
+	memcpy(tmp, a, entrySize);
+	memcpy(a,b , entrySize);
+	memcpy(b,tmp , entrySize);
 }
 
 	
