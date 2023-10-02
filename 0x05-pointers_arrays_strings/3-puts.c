@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * puts - prints a string
+ *_puts - prints a string
  *
  * @str: string to be printe
  * Return: void
