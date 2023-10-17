@@ -1,17 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
+/**
+ * printAddresses: This program demonstrates printing the addresses of an initialized int,
+ * char, pointer, string and array
+ *
+ */
+void printAddresses()
+{
+	int num = 42;
+	char letter = 'A';
+	int *ptr = &num;
+	char str[] = "Hello";
+	int arr[] = {1, 2, 3, 4, 5};
+
+	printf("Address of int: %p\n", (void *)&num);
+	printf("Address of char: %p\n", (void *)&letter);
+	printf("Address of pointer: %p\n", (void *)&ptr);
+	printf("Address of string: %p\n", (void *)str);
+	printf("Address of array: %p\n", (void *)arr);
+}
 
 /**
- * main - A program that swaps two variables using pointers
+ * main: calls the function printAddresses
  *
- * Return - void
+ * return - 0;
  */
-void main()
-{
-	int *a, *b;
-	int temp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+int main()
+{
+	printAddresses();
+	return (0);
 }
