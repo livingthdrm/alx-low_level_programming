@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * printAddresses - This program demonstrates printing the addresses
  * of an initialized int,char, pointer, string and array
