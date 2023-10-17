@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * printAddresses: This program demonstrates printing the addresses of an initialized int,
- * char, pointer, string and array
+ * printAddresses - This program demonstrates printing the addresses
+ * of an initialized int,char, pointer, string and array
  *
  */
-void printAddresses()
+void printAddresses(void)
 {
 	int num = 42;
 	char letter = 'A';
@@ -20,12 +20,12 @@ void printAddresses()
 }
 
 /**
- * main: calls the function printAddresses
+ * main - calls the function printAddresses
  *
- * return - 0;
+ * Return: Always 0;
  */
 
-int main()
+int main(void)
 {
 	printAddresses();
 	return (0);
