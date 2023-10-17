@@ -8,7 +8,7 @@
  */
 void main()
 {
-	int* a, b;
+	int *a, *b;
 	int temp;
 
 	temp = *a;
