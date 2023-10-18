@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 /**
  * printAddresses - This program demonstrates printing the addresses
