@@ -8,9 +8,8 @@
 
 int main(void)
 {
-	char str[100] = a;
+	const char *string = "\"Programming is like building a multilingual puzzle";
 
-	a = "\"Programming is like building a multilingual puzzle";
-	puts(str);
+	puts(string);
 	return (0);
 }
