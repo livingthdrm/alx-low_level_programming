@@ -4,7 +4,7 @@
 /**
  * main - prints a string to stderr
  *
- * Return on success  1
+ * Return: on success  1
  */
 int main(void)
 {
