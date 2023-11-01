@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	char *c;
-	
-	*c = "\"Programming is like building a multilingual puzzle\n";
-	puts(c);
+	char str[];
+
+	str[] = "\"Programming is like building a multilingual puzzle;
+	puts(str);
 	return (0);
 }
