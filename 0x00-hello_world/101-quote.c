@@ -4,12 +4,11 @@
 /**
  * main - prints a string to stderr
  *
- * return: 1
  */
-int main(void)
+void main(void)
 {
-	const char *string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	char *string[100];
 
-	write(2, string, 59);
-	return (1);
-}	
+	*string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(2, &string, 1);
+}
