@@ -14,8 +14,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int i = 0;
-
 	while (n > 0)
 	{
 		i = n % 10;
