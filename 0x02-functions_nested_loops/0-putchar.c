@@ -13,7 +13,7 @@ int main(void)
 	while (*c < '\0')
 	{
 		_putchar('0' + *c);
-		*c++;
+		c++;
 	}
 	_putchar('\n');
 	return (0);
