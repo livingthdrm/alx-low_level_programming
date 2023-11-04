@@ -20,6 +20,7 @@ int _islower(int c)
 		{
 			return (1);
 		}
+		i++;
 	}
 	return (0);
 }
