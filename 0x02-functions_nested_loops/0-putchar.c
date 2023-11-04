@@ -10,9 +10,9 @@ int main(void)
 {
 	char *c = "_putchar";
 
-	while (*c < '\0')
+	while (*c != '\0')
 	{
-		_putchar('0' + *c);
+		_putchar(*c);
 		c++;
 	}
 	_putchar('\n');
