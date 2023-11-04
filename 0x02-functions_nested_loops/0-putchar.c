@@ -10,6 +10,11 @@ int main(void)
 {
 	char *c = "_putchar";
 
-	_putchar('0' + *c);
+	while (*c < '\0')
+	{
+		_putchar('0' + *c);
+		*c++;
+	}
+	_putchar('\n');
 	return (0);
 }
