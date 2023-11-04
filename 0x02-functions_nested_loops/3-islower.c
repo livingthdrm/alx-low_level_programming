@@ -12,7 +12,7 @@ int _islower(int c)
 
 	while (i < 'z')
 	{
-		if (char(c) == i)
+		if (c == i)
 		{
 			return (1);
 		}
