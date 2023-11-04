@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print alphabet - prints the alphabet in ascending order
+ * print_alphabet - prints the alphabet in ascending order
  */
 
 void print_alphabet(void)
