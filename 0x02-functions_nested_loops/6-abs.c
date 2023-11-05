@@ -1,23 +1,23 @@
 #include "main.h"
 /**
  * _abs - returns the absolute value of an integer
- * @int: value to quantify
+ * @i: value to quantify
  *
  * Return: Always 0
  */
-int _abs(int)
+int _abs(int i)
 {
-	if (int > 0)
+	if (i > 0)
 	{
-		return (int);
+		return (i);
 	}
-	else if (int == 0)
+	else if (i == 0)
 	{
 		return (0);
 	}
 	else
 	{
-		return (-int);
+		return (-i);
 	}
 	return (0);
 }
