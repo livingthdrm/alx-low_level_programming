@@ -3,6 +3,8 @@
 /**
  * _isalpha - checks whether a character is alphanumerical
  * @c: character to check
+ *
+ * Return: 1 if letter, 0 otherwise
  */
 int _isalpha(int c)
 {
