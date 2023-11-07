@@ -26,6 +26,4 @@ void times_table(void)
 	_putchar('0' + answer);
 	_putchar(44);
 	_putchar('\n');
-	i++;
-	}
 }
