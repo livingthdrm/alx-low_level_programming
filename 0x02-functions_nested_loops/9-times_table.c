@@ -25,9 +25,4 @@ void times_table(void)
 		_putchar('\n');
 		i++;
 	}
-	answer = i * j;
-
-	_putchar('0' + answer);
-	_putchar(44);
-	_putchar('\n');
 }
