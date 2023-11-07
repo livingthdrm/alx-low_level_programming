@@ -12,6 +12,8 @@ void times_table(void)
 	while (i <= 9)
 	{
 		_putchar('0' + i);
+		_putchar(44);
+		_putchar(32);
 
 		while (j <= 9)
 		{
