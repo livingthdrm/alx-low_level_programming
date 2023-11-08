@@ -20,9 +20,16 @@ void times_table(void)
 			_putchar('0' + j);
 			_putchar(44);
 			_putchar(32);
+
+			while (i <= j)
+			{
+				answer = i * j;
+				_putchar('0' + answer);
+				_putchar(44);
+				_putchar(32);
+			}
 			j++;
 		}
-		_putchar('\n');
 		i++;
 	}
 }
