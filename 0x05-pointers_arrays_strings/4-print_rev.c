@@ -7,9 +7,9 @@
  */
 void print_rev(char *s)
 {
-	*s = ('\0' - 1);
+	*s = 0;
 
-	while (*s)
+	while (*s < '\0')
 	{
 		_putchar(*s);
 		s--;
