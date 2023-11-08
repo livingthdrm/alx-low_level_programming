@@ -25,6 +25,8 @@ void times_table(void)
 			{
 				answer = i * j;
 				_putchar('0' + answer);
+				i++;
+				j++;
 				_putchar(44);
 				_putchar(32);
 			}
