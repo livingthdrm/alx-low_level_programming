@@ -8,11 +8,12 @@
  */
 void print_array(int *a, int n)
 {
-	while (*a <= n)
+	while (*a != '\0')
 	{
-		_putchar(*a);
-		_putchar(44);
-		_putchar(32);
+		while (*a <= n)
+		{
+			printf("%d, ", *s);
+		}
 	}
 	_putchar('\n');
 }
