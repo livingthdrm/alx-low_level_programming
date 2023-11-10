@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 	{
 		while (*a != '\0')
 		{
-			printf("%d", a[i]);
+			_putchar('0' + *a);
 			a++;
 		}
 		_putchar(44);
