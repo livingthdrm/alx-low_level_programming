@@ -13,8 +13,8 @@ void print_array(int *a, int n)
 		while (*a <= n)
 		{
 			printf("%d, ", *a);
-			a++;
 		}
+		a++;
 	}
 	_putchar('\n');
 }
