@@ -10,16 +10,16 @@ void print_array(int *a, int n)
 {
 	int i = 0;
 
-	while (*a != '\0')
+	while (i < n)
 	{
-		while (i < n)
+		while (*a != '\0')
 		{
-			printf("%d", *a[i]);
-			i++;
+			printf("%d", a[i]);
+			a++;
 		}
 		_putchar(44);
 		_putchar(32);
-		a++;
+		i++;
 	}
 	_putchar('\n');
 }
