@@ -8,10 +8,12 @@
  */
 void print_array(int *a, int n)
 {
-	while (*a < n)
+	int i = 0;
+
+	while (a[i] < n)
 	{
 		printf("%d, ", *a);
-		*(a + 1);
+		i++;
 	}
 	printf("\n");
 }
