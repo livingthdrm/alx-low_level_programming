@@ -12,7 +12,6 @@ void print_rev(char *s)
 	while (*s != '\0')
 	{
 		s++;
-		count += count;
 		count++;
 	}
 	while (*s <= count && count >= 0)
