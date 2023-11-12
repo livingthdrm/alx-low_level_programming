@@ -7,18 +7,19 @@
 void rev_string(char *s)
 {
 	int count = 0;
+	char *rev;
 
 	while (*s != '\0')
 	{
-		count += count;
 		count++;
 		s++;
 	}
-	count = s[count - 1];
-		while (*s <= count && count > 0)
+		while (count > 0)
 		{
+			*rev = *s;
 			s--;
 			count--;
+			rev++;
 		}
 		_putchar('\0');
 }
