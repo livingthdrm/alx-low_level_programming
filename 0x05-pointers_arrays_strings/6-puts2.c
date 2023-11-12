@@ -6,7 +6,7 @@
  */
 void puts2(char *str)
 {
-	_putchar(*s);
+	_putchar(*str);
 	while (*str != '\0')
 	{
 		str += 2;
