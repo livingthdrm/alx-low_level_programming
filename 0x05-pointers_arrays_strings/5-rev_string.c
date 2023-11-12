@@ -17,7 +17,7 @@ void rev_string(char *s)
 		{
 			s--;
 			count--;
-			_putchar(*s);
 		}
+		_putchar(*s);
 		_putchar('\0');
 }
