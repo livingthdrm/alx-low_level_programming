@@ -13,11 +13,11 @@ void rev_string(char *s)
 		count++;
 		s++;
 	}
+	count = s - 1;
 		while (count > 0)
 		{
 			s--;
 			count--;
-			*s = s[count];
 		}
 		_putchar('\0');
 }
