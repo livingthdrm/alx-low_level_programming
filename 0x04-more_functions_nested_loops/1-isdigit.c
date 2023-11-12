@@ -4,7 +4,7 @@
  * _isdigit - function that checks if a number is digit
  * @c: number to check
  *
- * return: 1 if c is a digit ,Returns 0 otherwise
+ * Return: 1 if c is a digit ,Returns 0 otherwise
  */
 int _isdigit(int c)
 {
