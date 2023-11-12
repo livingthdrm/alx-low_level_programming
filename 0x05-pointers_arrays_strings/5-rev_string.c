@@ -13,10 +13,9 @@ void rev_string(char *s)
 		count++;
 		s++;
 	}
-	*s = s[count];
 		while (count > 0)
 		{
-			*s = s[count];
+			_putchar(s[count];
 			s--;
 			count--;
 		}
