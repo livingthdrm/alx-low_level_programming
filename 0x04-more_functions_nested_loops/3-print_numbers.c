@@ -9,6 +9,10 @@ void print_numbers(void)
 
 	while (c <= 9)
 	{
+		if (c == 2 && c == 4)
+		{
+			c++;
+		}
 		_putchar(c + '0');
 		c++;
 	}
