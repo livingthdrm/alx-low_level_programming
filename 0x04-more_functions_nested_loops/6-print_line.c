@@ -1,8 +1,7 @@
 #include "main.h"
 
-/*
- * print_line - a function that draws a straight line in the terminal
- *
+/**
+ * print_line() - a function that draws a straight line in the terminal
  * @n: number of times to print line
  */
 void print_line(int n)
