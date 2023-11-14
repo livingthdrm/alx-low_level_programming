@@ -25,7 +25,6 @@ void more_numbers(void)
 			j++;
 		}
 		i++;
-		write(1, end, 3);
+		write(1, end, 1);
 	}
 }
-
