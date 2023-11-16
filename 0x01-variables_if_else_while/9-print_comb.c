@@ -12,7 +12,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		_putchar('0' + i);
+		putchar('0' + i);
 		if (i < 9)
 		{
 			putchar(',');
@@ -20,5 +20,6 @@ int main(void)
 		}
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
