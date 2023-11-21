@@ -16,13 +16,10 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		final++;
 	}
-	while (*src != '\0')
+	while (*src != '\0' && ((final - dest) <= n))
 	{
-		if ((final - dest) <= n)
-		{
-			*final = *src;
-			final++;
-		}
+		*final = *src;
+		final++;
 		src++;
 	}
 	*final = '\0';
