@@ -5,6 +5,8 @@
  * @dest: destination string
  * @src: source string
  * @n: uptopoint to copy
+ *
+ * Return: 0
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -15,12 +17,13 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 	}
 
-	while (*src < n && *src != '\0')
+	while (*src != '\0' && n > 0)
 	{
 		*i = *src;
 		src++;
-		i--;
+		i++;
+		n--;
 	}
-	*dest = '\0';
+	*i = '\0';
 	return (dest);
 }
