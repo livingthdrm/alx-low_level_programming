@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
 		n = n * -1;
 	}
 	_sqrt_recursion(n - buffer);
-	buffer+2;
+	buffer+=2;
 	times++;
 	return (times);
 }
