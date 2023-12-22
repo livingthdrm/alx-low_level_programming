@@ -20,5 +20,5 @@ int _sqrt_recursion(int n)
 	}
 	_sqrt_recursion(n - (buffer + 2));
 	times++;
-	return (0);
+	return (times);
 }
