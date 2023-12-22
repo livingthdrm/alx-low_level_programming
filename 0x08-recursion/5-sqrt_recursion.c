@@ -7,19 +7,17 @@
  */
 int _sqrt_recursion(int n)
 {
-	int times;
-	int buffer;
+	int times = 0;
+	int buffer = 1;
 	
-	if (n < buffer)
+	if (n == 0)
 	{
-		return (-1);
+		return (times);
 	}
 	if (n < 0)
 	{
 		n = n * -1;
 	}
-	_sqrt_recursion(n - buffer);
-	buffer+=2;
+	_sqrt_recursion(n - (buffer + 2));
 	times++;
-	return (times);
 }
