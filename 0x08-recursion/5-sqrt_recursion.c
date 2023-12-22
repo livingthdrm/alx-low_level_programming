@@ -16,10 +16,10 @@ int _sqrt_recursion(int n)
 	}
 	if (n < 0)
 	{
-		n * -1;
+		n = n * -1;
 	}
-	n - buffer;
-	_sqrt_recursion(n - (buffer + 2));
+	_sqrt_recursion(n - buffer);
+	buffer+2;
 	times++;
 	return (times);
 }
