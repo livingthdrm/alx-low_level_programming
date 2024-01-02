@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
 	int i;
-	
+
 	if (argc == 1)
 	{
 		printf("%s\n", argv[0]);
@@ -21,6 +21,5 @@ int main(int argc, char **argv)
 		printf("%s\n", argv[i]);
 	}
 	}
-	printf("\n");
 	return (0);
 }
