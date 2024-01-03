@@ -15,9 +15,9 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	else if (atoi(argv[1] < 0))
+	else if (atoi(argv[1]) < 0)
 	{
-		printf(0\n);
+		printf("%d\n", 0);
 	}
 	else
 	{
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		c2 = (atoi(argv[1]) - (25 * c25) - (10 * c10) - (5 * c5)) / 2;
 		c1 = (atoi(argv[1]) - (25 * c25) - (10 * c10) - (5 * c5) - (2 * c2));
 		result = c1 + c2 + c5 + c10 + c25;
-		printf(result);
+		printf("%d\n", result);
 	}
 	return (0);
 }
