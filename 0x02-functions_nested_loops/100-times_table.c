@@ -2,9 +2,35 @@
 #include "main.h"
 
 /**
- * print_times_table - a function to print the n times table starting with 0
+ * print_table - a function to print the n times table starting with 0
  * @n: the number to print
  *
+ */
+void print_table(int n)
+{
+	if (n < 10)
+	{
+		_putchar(32);
+		_putchar(32);
+		_putchar('0' + n);
+	}
+	else if (result < 100)
+	{
+		_putchar(32);
+		_putchar('0' + n / 10);
+		_putchar('0' + n % 10);
+	}
+	else
+	{
+		_putchar('0' + n / 100);
+		_putchar('0' + (n / 10) % 10);
+		_putchar('0' + n % 10);
+	}
+}
+
+/**
+ * print_times_table - a function to compute the level of n
+ * @n: the number to print
  */
 void print_times_table(int n)
 {
@@ -14,7 +40,7 @@ void print_times_table(int n)
 	{
 	for (i = 0; i <= n; i++)
 	{
-		for (j = 0; j <= n, j++)
+		for (j = 0; j <= n; j++)
 		{
 			result = i * j;
 
@@ -26,24 +52,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(32);
-			if (result < 10)
-			{
-				_putchar(32);
-				_putchar(32);
-				_putchar('0' + result);
-			}
-			else if (result < 100)
-			{
-				_putchar(32);
-				_putchar('0' + result / 10);
-				_putchar('0' + result % 10);
-			}
-			else
-			{
-				_putchar('0' + result / 100);
-				_putchar('0' + (result / 10) % 10);
-				_putchar('0' + result % 10);
-			}
+				print_table(result);
 			}
 		}
 		_putchar('\n');
