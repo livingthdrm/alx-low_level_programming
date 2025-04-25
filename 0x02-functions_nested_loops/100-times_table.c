@@ -14,7 +14,7 @@ void print_table(int n)
 		_putchar(32);
 		_putchar('0' + n);
 	}
-	else if (result < 100)
+	else if (n < 100)
 	{
 		_putchar(32);
 		_putchar('0' + n / 10);
