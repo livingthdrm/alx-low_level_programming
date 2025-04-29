@@ -1,156 +1,225 @@
-ALX Low-Level Programming - 0x01-variables_if_else_while
+ALX Low-Level Programming - 0x02-functions_nested_loops
 
 This repository contains C programming tasks focused on:
 
-    Variables, if/else, and while loops
+    Functions and nested loops
 
-    Random number generation
+    Character manipulation with _putchar
 
-    Character manipulation with putchar
+    Mathematical operations
 
-    Number printing and combinations
+    Fibonacci sequence generation
+
+    Time tables and number sequences
 
 Tasks Overview
-0. Positive or Negative
+0. _putchar
 
-📜 File: 0-positive_or_negative.c
-✅ Task: Assign a random number to n and print whether it's positive, negative, or zero.
+📜 File: 0-putchar.c
+✅ Task: Print _putchar followed by a new line.
 🔹 Constraints:
 
-    Must use if, else if, else
+    Must use _putchar function
 
-    Output format: "<n> is positive/negative/zero"
-
-🔹 Compile & Run:
-sh
-
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-positive_or_negative.c -o positive_or_negative
-./positive_or_negative
-
-1. The Last Digit
-
-📜 File: 1-last_digit.c
-✅ Task: Print the last digit of a random number with conditions:
-
-    > 5: "and is greater than 5"
-
-    = 0: "and is 0"
-
-    < 6 && != 0: "and is less than 6 and not 0"
-
-🔹 Example Output:
-sh
-
-Last digit of 629438752 is 2 and is less than 6 and not 0
-
-2. Alphabet Game
-
-📜 File: 2-print_alphabet.c
-✅ Task: Print the lowercase alphabet using putchar (max 2 calls).
-🔹 Constraints:
-
-    No printf, puts
-
-    Only main function
+    Return 0
 
 🔹 Output:
-sh
+
+_putchar
+
+1. Alphabet Game
+
+📜 File: 1-alphabet.c
+✅ Task: Print lowercase alphabet using _putchar (max 2 calls).
+🔹 Prototype: void print_alphabet(void)
+🔹 Output:
 
 abcdefghijklmnopqrstuvwxyz
 
-3. alphABET
+2. 10 x Alphabet
 
-📜 File: 3-print_alphabets.c
-✅ Task: Print lowercase and uppercase alphabets using putchar (max 3 calls).
+📜 File: 2-print_alphabet_x10.c
+✅ Task: Print alphabet 10 times using _putchar (max 2 calls).
+🔹 Prototype: void print_alphabet_x10(void)
 🔹 Output:
-sh
 
-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+(10 times)
 
-4. Alphabet Soup
+3. islower Check
 
-📜 File: 4-print_alphabt.c
-✅ Task: Print the alphabet except q and e using putchar (max 2 calls).
+📜 File: 3-islower.c
+✅ Task: Check for lowercase character.
+🔹 Prototype: int _islower(int c)
+🔹 Returns:
+
+    1 if lowercase
+
+    0 otherwise
+
+🔹 Example:
+c
+
+_islower('a'); // returns 1
+_islower('A'); // returns 0
+
+4. isalpha Check
+
+📜 File: 4-isalpha.c
+✅ Task: Check for alphabetic character (lowercase/uppercase).
+🔹 Prototype: int _isalpha(int c)
+🔹 Returns:
+
+    1 if letter
+
+    0 otherwise
+
+🔹 Example:
+c
+
+_isalpha('Z'); // returns 1
+_isalpha('!'); // returns 0
+
+5. Sign Printer
+
+📜 File: 5-sign.c
+✅ Task: Print the sign of a number (+, 0, -).
+🔹 Prototype: int print_sign(int n)
+🔹 Returns:
+
+    1 if n > 0
+
+    0 if n = 0
+
+    -1 if n < 0
+
+🔹 Example Output:
+
++, 1
+0, 0
+-, -1
+
+6. Absolute Value
+
+📜 File: 6-abs.c
+✅ Task: Compute absolute value of an integer.
+🔹 Prototype: int _abs(int)
+🔹 Example:
+c
+
+_abs(-98); // returns 98
+
+7. Last Digit Printer
+
+📜 File: 7-print_last_digit.c
+✅ Task: Print and return the last digit of a number.
+🔹 Prototype: int print_last_digit(int)
+🔹 Example Output:
+
+8044  // (for inputs 98, 0, -1024)
+
+8. Jack Bauer's Day
+
+📜 File: 8-24_hours.c
+✅ Task: Print every minute of a 24-hour day (00:00 to 23:59).
+🔹 Prototype: void jack_bauer(void)
 🔹 Output:
-sh
 
-abcdfghijklmnoprstuvwxyz
+00:00
+00:01
+...
+23:59
 
-5. Numbers
+9. Times Table
 
-📜 File: 5-print_numbers.c
-✅ Task: Print single-digit numbers (0-9).
+📜 File: 9-times_table.c
+✅ Task: Print the 9 times table (0-9).
+🔹 Prototype: void times_table(void)
 🔹 Output:
-sh
 
-0123456789
+0,  0,  0, ...
+0,  1,  2, ...
+...
+0,  9, 18, ...
 
-6. Numberz
+10. Addition
 
-📜 File: 6-print_numberz.c
-✅ Task: Print 0-9 using putchar (max 2 calls, no char variables).
+📜 File: 10-add.c
+✅ Task: Add two integers and return the result.
+🔹 Prototype: int add(int, int)
+🔹 Example:
+c
+
+add(89, 9); // returns 98
+
+11. Print to 98
+
+📜 File: 11-print_to_98.c
+✅ Task: Print all numbers from n to 98.
+🔹 Prototype: void print_to_98(int n)
+🔹 Example Output:
+
+0, 1, 2, ..., 98
+111, 110, ..., 98
+-10, -9, ..., 98
+
+12. Advanced Times Table
+
+📜 File: 100-times_table.c
+✅ Task: Print n times table (0-15).
+🔹 Prototype: void print_times_table(int n)
+🔹 Constraints:
+
+    Do not print if n > 15 or n < 0
+
 🔹 Output:
-sh
 
-0123456789
+0,   0,   0, ...
+0,   1,   2, ...
+...
+0,  12, 24, ...
 
-7. Smile in the Mirror
+13. Sum of Multiples (Advanced)
 
-📜 File: 7-print_tebahpla.c
-✅ Task: Print the lowercase alphabet in reverse using putchar (max 2 calls).
+📜 File: 101-natural.c
+✅ Task: Compute sum of multiples of 3 or 5 below 1024.
 🔹 Output:
-sh
 
-zyxwvutsrqponmlkjihgfedcba
+23  // (for numbers below 10)
 
-8. Hexadecimal
+14. Fibonacci 50 (Advanced)
 
-📜 File: 8-print_base16.c
-✅ Task: Print base-16 numbers (0-9, a-f) using putchar (max 3 calls).
+📜 File: 102-fibonacci.c
+✅ Task: Print first 50 Fibonacci numbers (starting 1, 2).
 🔹 Output:
-sh
 
-0123456789abcdef
+1, 2, 3, 5, 8, ..., 12586269025
 
-9. Combinations
+15. Even Fibonacci Sum (Advanced)
 
-📜 File: 9-print_comb.c
-✅ Task: Print all possible single-digit combinations (, separated) using putchar (max 4 calls).
+📜 File: 103-fibonacci.c
+✅ Task: Sum even Fibonacci numbers below 4,000,000.
 🔹 Output:
-sh
 
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+4613732
 
-10. Advanced Combinations (Two Digits)
+16. Fibonacci 98 (Advanced)
 
-📜 File: 100-print_comb3.c
-✅ Task: Print unique two-digit combinations (ascending order) using putchar (max 5 calls).
+📜 File: 104-fibonacci.c
+✅ Task: Print first 98 Fibonacci numbers (without long long, arrays, etc.).
+🔹 Constraints:
+
+    No hardcoding except 1 and 2
+
+    Must handle large numbers
+
 🔹 Output:
-sh
 
-01, 02, 03, ..., 98, 99
-
-11. Advanced Combinations (Three Digits)
-
-📜 File: 101-print_comb4.c
-✅ Task: Print unique three-digit combinations (ascending order) using putchar (max 6 calls).
-🔹 Output:
-sh
-
-012, 013, 014, ..., 789
-
-12. Software is Eating the World
-
-📜 File: 102-print_comb5.c
-✅ Task: Print all combinations of two two-digit numbers (00-99) using putchar (max 8 calls).
-🔹 Output:
-sh
-
-00 01, 00 02, ..., 98 99
+1, 2, 3, ..., 218922995834555169026
 
 Key Takeaways
 
-✔ Mastered if/else and loops for conditional logic.
-✔ Used putchar efficiently under strict constraints.
-✔ Generated combinations of numbers in ascending order.
-✔ Worked with random numbers and last-digit extraction.
+✔ Mastered _putchar usage under strict call limits.
+✔ Implemented mathematical operations (absolute value, sign checks).
+✔ Generated sequences (times tables, Fibonacci).
+✔ Worked with constraints (no long long, no arrays).
