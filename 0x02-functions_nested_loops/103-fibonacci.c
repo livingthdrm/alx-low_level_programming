@@ -7,20 +7,20 @@
  */
 void fibonacci2(void)
 {
-	long i = 1, j = 2, result = 0;
+	long i = 1, j = 2, fibnext, result = 2;
 
 	while (result <= 4000000)
 	{
-		result = i + j;
+		fibnext = i + j;
 		i = j;
-		j = result;
+		j = fibnext;
 
-		if (result % 2 == 0)
+		if (fibnext % 2 == 0)
 		{
-			result += result;
+			result += fibnext;
 		}
 	}
-	printf("%ld\n", result = result + 2);
+	printf("%ld\n", result);
 }
 /**
  * main - a function to test the above function
