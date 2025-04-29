@@ -2,26 +2,26 @@
 #include "main.h"
 
 /**
- * a program that prints the first 50 Fibonacci numbers,
+ * fibonacci - a program that prints the first 50 Fibonacci numbers,
  * starting with 1 and 2, followed by a new line.
  *
  */
 void fibonacci(void)
 {
-	int i = 1, j = 2, result = 0, n = 3;
+	long long i = 1, j = 2, result = 0, n = 3;
 
-		printf("%d, ", i);
-		printf("%d, ", j);
+		printf("%lld, ", i);
+		printf("%lld, ", j);
 	while (n <= 50)
 	{
 		result = (i + j);
 		if (n == 50)
 		{
-			printf("%d", result);
+			printf("%lld", result);
 		}
 		else
 		{
-			printf("%d, ", result);
+			printf("%lld, ", result);
 		}
 		i = j;
 		j = result;
