@@ -8,20 +8,20 @@
  */
 void fibonacci(void)
 {
-	int i = 1, j = 2, result = 0, n = 3;
+	long i = 1, j = 2, result = 0, n = 3;
 
-		printf("%d, ", i);
-		printf("%d, ", j);
+		printf("%ld, ", i);
+		printf("%ld, ", j);
 	while (n <= 50)
 	{
 		result = (i + j);
 		if (n == 50)
 		{
-			printf("%d", result);
+			printf("%ld", result);
 		}
 		else
 		{
-			printf("%d, ", result);
+			printf("%ld, ", result);
 		}
 		i = j;
 		j = result;
