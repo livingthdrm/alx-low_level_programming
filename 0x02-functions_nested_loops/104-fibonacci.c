@@ -12,10 +12,10 @@ void fibonacci3(void)
 
 		printf("%lu, ", i);
 		printf("%lu, ", j);
-	while (n <= 96)
+	while (n <= 98)
 	{
 		result = (i + j);
-		if (n == 96)
+		if (n == 98)
 		{
 			printf("%lu", result);
 		}
