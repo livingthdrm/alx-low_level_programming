@@ -1,96 +1,163 @@
+ALX Low-Level Programming - 0x00-hello_world
 
+This repository contains introductory C programming tasks covering:
+
+    Preprocessing
+
+    Compilation
+
+    Assembly
+
+    Basic I/O (puts, printf)
+
+    Data type sizes
+
+    Advanced assembly (Intel syntax)
+
+    Writing to stderr
+
+Tasks Overview
 0. Preprocessor
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
-Write a script that runs a C file through the preprocessor and save the result into another file.
+📜 Script: 0-preprocessor
+✅ Task: Run a C file ($CFILE) through the preprocessor and save the result in c.
+🔹 Example:
+sh
 
-    The C file name will be saved in the variable $CFILE
-    The output should be saved in the file c
-
+export CFILE=main.c
+./0-preprocessor
 
 1. Compiler
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
-Write a script that compiles a C file but does not link.
+📜 Script: 1-compiler
+✅ Task: Compile a C file ($CFILE) into an object file (.o).
+🔹 Example:
+sh
 
-    The C file name will be saved in the variable $CFILE
-    The output file should be named the same as the C file, but with the extension .o instead of .c.
-        Example: if the C file is main.c, the output file should be main.o
+export CFILE=main.c
+./1-compiler  # Output: main.o
 
 2. Assembler
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
-Write a script that generates the assembly code of a C code and save it in an output file.
+📜 Script: 2-assembler
+✅ Task: Generate assembly code from a C file ($CFILE) and save it as .s.
+🔹 Example:
+sh
 
-    The C file name will be saved in the variable $CFILE
-    The output file should be named the same as the C file, but with the extension .s instead of .c.
-        Example: if the C file is main.c, the output file should be main.s
+export CFILE=main.c
+./2-assembler  # Output: main.s
 
-3. Name
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
+3. Name the Executable
 
-Write a script that compiles a C file and creates an executable named cisfun.
+📜 Script: 3-name
+✅ Task: Compile $CFILE into an executable named cisfun.
+🔹 Example:
+sh
 
-    The C file name will be saved in the variable $CFILE
-
+export CFILE=main.c
+./3-name  # Creates: cisfun
 
 4. Hello, puts
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
-Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+📜 File: 4-puts.c
+✅ Task: Print "Programming is like building a multilingual puzzle" using puts.
+🔹 Constraints:
 
-    Use the function puts
-    You are not allowed to use printf
-    Your program should end with the value 0
+    No printf
 
+    Must return 0
+
+🔹 Compile & Run:
+sh
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c -o puts
+./puts
 
 5. Hello, printf
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
-Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
+📜 File: 5-printf.c
+✅ Task: Print "with proper grammar, but the outcome is a piece of art," using printf.
+🔹 Constraints:
 
-    Use the function printf
-    You are not allowed to use the function puts
-    Your program should return 0
-    Your program should compile without warning when using the -Wall gcc option
+    No puts
 
+    Must return 0
 
-6. Size is not grandeur, and territory does not make a nation
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
+    No compiler warnings (-Wall)
 
-Write a C program that prints the size of various types on the computer it is compiled and run on.
+🔹 Compile & Run:
+sh
 
-    You should produce the exact same output as in the example
-    Warnings are allowed
-    Your program should return 0
-    You might have to install the package libc6-dev-i386 on your Linux to test the -m32 gcc option
+gcc -Wall -Wextra -pedantic -std=gnu89 5-printf.c -o printf
+./printf
 
+6. Size is Not Grandeur
 
-7. Intel
-#advanced
-Score: 50.0% (Checks completed: 100.0%)
+📜 File: 6-size.c
+✅ Task: Print the size of various data types (char, int, long, long long, float).
+🔹 Example Output:
+sh
 
-Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 8 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
 
-    The C file name will be saved in the variable $CFILE.
-    The output file should be named the same as the C file, but with the extension .s instead of .c.
-        Example: if the C file is main.c, the output file should be main.s
+🔹 Compile & Run (32-bit vs 64-bit):
+sh
 
+gcc 6-size.c -m32 -o size32  # 32-bit
+gcc 6-size.c -m64 -o size64  # 64-bit
+./size32
+./size64
 
-8. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity
-#advanced
-Score: 50.0% (Checks completed: 100.0%)
+7. Intel Assembly (Advanced)
 
-Write a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+📜 Script: 100-intel
+✅ Task: Generate Intel-syntax assembly from $CFILE and save as .s.
+🔹 Example:
+sh
 
-    You are not allowed to use any functions listed in the NAME section of the man (3) printf or man (3) puts
-    Your program should return 1
-    Your program should compile without any warnings when using the -Wall gcc option
+export CFILE=main.c
+./100-intel  # Output: main.s (Intel syntax)
 
+8. UNIX Quote (Advanced)
+
+📜 File: 101-quote.c
+✅ Task: Print to stderr:
+"and that piece of art is useful\" - Dora Korpar, 2015-10-19"
+🔹 Constraints:
+
+    No printf or puts
+
+    Must return 1
+
+    No compiler warnings (-Wall)
+
+🔹 Compile & Run:
+sh
+
+gcc -Wall -Wextra -pedantic -std=gnu89 101-quote.c -o quote
+./quote  # Output to stderr
+
+How to Compile & Run
+
+All scripts assume $CFILE is set:
+sh
+
+export CFILE=main.c
+
+For C files:
+sh
+
+gcc -Wall -Wextra -pedantic -std=gnu89 <file.c> -o <output>
+./<output>
+
+Key Takeaways
+
+✔ Preprocessor → Compiler → Assembler → Linking workflow.
+✔ puts vs printf (and when to use each).
+✔ Data type sizes vary between 32-bit and 64-bit systems.
+✔ Intel vs AT&T assembly syntax.
+✔ Writing to stderr without printf/puts.
