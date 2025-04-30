@@ -1,48 +1,109 @@
+ALX Low-Level Programming - 0x03-debugging
 
-0. Multiple mains
-mandatory
+This repository contains debugging tasks focused on:
 
-In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
+    Testing functions with multiple main files
 
-Based on the main.c file above, create a file named 0-main.c. This file must test that the function positive_or_negative() gives the correct output when given a case of 0.
+    Identifying and fixing infinite loops
 
-You are not coding the solution / function, you’re just testing it! However, you can adapt your function from 0x01. C - Variables, if, else, while - Task #0 to compile with this main file to test locally.
+    Correcting logical errors in comparison operations
 
-    You only need to upload 0-main.c and main.h for this task. We will provide our own positive_or_negative() function.
-    You are not allowed to add or remove lines of code, you may change only one line in this task.
+    Handling leap year calculations
 
+Tasks Overview
+0. Multiple Mains
 
-1. Like, comment, subscribe
-mandatory
+📜 Files: 0-main.c, main.h
+✅ Task: Test the positive_or_negative() function with a case of 0.
+🔹 Key Changes:
 
-Copy this main file. Comment out (don’t delete it!) the part of the code that is causing the output to go into an infinite loop.
+    Modified 0-main.c to test i = 0
 
-    Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
-    You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
+    Kept file structure identical (only changed one line)
 
+🔹 Output:
+
+0 is zero
+
+1. Like, Comment, Subscribe
+
+📜 File: 1-main.c
+✅ Task: Fix an infinite loop by commenting out problematic code.
+🔹 Problem:
+c
+
+while (i < 10)
+{
+    putchar(i);  // Infinite loop (i never increments)
+}
+
+🔹 Solution:
+c
+
+// while (i < 10)
+// {
+//     putchar(i);
+// }
+
+🔹 Output:
+
+Infinite loop incoming :(
+Infinite loop avoided! \o/
 
 2. 0 > 972?
-mandatory
 
-This program prints the largest of three integers.
-? That’s definitely not right.
+📜 Files: 2-largest_number.c, main.h
+✅ Task: Fix logic to correctly identify the largest of three numbers.
+🔹 Original Bug:
+c
 
-Fix the code in 2-largest_number.c so that it correctly prints out the largest of three numbers, no matter the case.
+if (a > b && b > c)  // Incorrect logic
+{
+    largest = a;
+}
 
-    Line count will not be checked for this task.
+🔹 Fixed Logic:
+c
 
+if (a >= b && a >= c)
+{
+    largest = a;
+}
+else if (b >= a && b >= c)
+{
+    largest = b;
+}
+else
+{
+    largest = c;
+}
 
+🔹 Output:
 
-3. Leap year
-mandatory
+972 is the largest number
 
-This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
+3. Leap Year
 
-? That doesn’t seem right.
+📜 Files: 3-print_remaining_days.c, main.h
+✅ Task: Fix leap year calculations for February 29th.
+🔹 Original Bug:
+c
 
-Fix the print_remaining_days() function so that the output works correctly for all dates and all leap years.
+if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
 
-    Line count will not be checked for this task.
-    You can assume that all test cases have valid months (i.e. the value of month will never be less than 1 or greater than 12) and valid days (i.e. the value of day will never be less than 1 or greater than 31).
-    You can assume that all test cases have valid month/day combinations (i.e. there will never be a June 31st or November 31st, etc.), but not all month/day/year combinations are valid (i.e. February 29, 1991 or February 29, 2427).
+🔹 Fixed Logic:
+c
 
+if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+
+🔹 Output for 02/29/2000:
+
+Date: 02/29/2000
+Day of the year: 60
+Remaining days: 306
+
+Key Fixes
+
+✔ Corrected logical conditions for number comparisons.
+✔ Fixed leap year detection (properly handles 400/100/4 rules).
+✔ Removed infinite loops by commenting out faulty code.
