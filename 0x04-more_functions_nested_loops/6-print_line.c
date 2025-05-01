@@ -2,6 +2,7 @@
 
 /**
  * print_line - a function to print a straight line
+ * @n: the number of times to print the line
  */
 void print_line(int n)
 {
