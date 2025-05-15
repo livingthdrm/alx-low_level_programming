@@ -10,12 +10,13 @@ void prime_factor(void)
 	unsigned long number = 612852475143;
 	unsigned long i = 2, j;
 
-	while (i * i <= number)
+	while (i <= number)
 	{
-		while (number % i == 0)
+		if (number % i == 0)
 		{
 			j = i;
 			number /= i;
+			i = 1;
 		}
 		i++;
 	}
