@@ -13,10 +13,8 @@ void prime_factor(void)
 	while (i <= number)
 	{
 		if (number % i == 0)
-		{
 			j = i;
 			number /= i;
-			i = 1;
 		}
 		i++;
 	}
