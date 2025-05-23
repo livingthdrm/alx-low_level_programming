@@ -1,37 +1,30 @@
 #include "main.h"
 
 /**
- * print_number - a function that prints an integer
- * but only using putchar
- * @n: the number to print
+ * print_number - prints an integer using only _putchar
+ * @n: the integer to print
  */
 void print_number(int n)
 {
+	unsigned int num, divisor = 1;
+
 	if (n < 0)
 	{
-		n = -n;
 		_putchar('-');
+		num = -((unsigned int)n);
 	}
-	if (n > -10 && n < 10)
+	else
 	{
-		_putchar('0' + n);
+		num = n;
 	}
-	else if (n > -100 && n < 100)
+	while (num / divisor >= 10)
 	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
+		divisor *= 10;
 	}
-	else if (n > -1000 && n < 1000)
+	while (divisor > 0)
 	{
-		_putchar('0' + n / 100);
-		_putchar('0' + (n / 10) % 10);
-		_putchar('0' + n % 10);
-	}
-	else if (n > -10000 && n < 10000)
-	{
-		_putchar('0' + n / 1000);
-		_putchar('0' + (n / 100) % 10);
-		_putchar('0' + (n / 10) % 10);
-		_putchar('0' + n % 10);
+		_putchar((num / divisor) + '0');
+		num %= divisor;
+		divisor /= 10;
 	}
 }
