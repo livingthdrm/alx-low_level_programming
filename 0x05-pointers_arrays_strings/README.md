@@ -1,93 +1,154 @@
-🔥 Pointers, Arrays & Strings - C Programming Adventure 🔥
+ALX Low-Level Programming - 0x05-pointers_arrays_strings
 
-Welcome to "Pointers, Arrays & Strings", a thrilling dive into low-level C programming! 🚀 Here, we explore the power of pointers, the flexibility of arrays, and the magic of strings—all while sharpening our C skills to razor-sharp precision.
+This repository contains C programming tasks focused on:
 
-Each task is a puzzle, a challenge, and a step toward mastering memory manipulation in C. Let’s get started!
-🎯 Task List
-0. reset_to_98 (0-reset_to_98.c)
+    Pointer manipulation
 
-💡 Mission: Change destiny!
-A function that takes a pointer to an int and updates its value to 98.
-🔹 Prototype: void reset_to_98(int *n);
-1. swap_int (1-swap.c)
+    Array operations
 
-💡 Mission: The Great Swap!
-A function that swaps the values of two integers.
-🔹 Prototype: void swap_int(int *a, int *b);
-2. _strlen (2-strlen.c)
+    String handling
 
-💡 Mission: Measure the unseen!
-A function that returns the length of a string (without strlen!).
-🔹 Prototype: int _strlen(char *s);
-3. _puts (3-puts.c)
+    Memory management
 
-💡 Mission: Speak your mind!
-A function that prints a string, followed by a new line (\n).
-🔹 Prototype: void _puts(char *str);
-4. print_rev (4-print_rev.c)
+    Advanced algorithms
 
-💡 Mission: Rewind time!
-A function that prints a string in reverse, then a new line.
-🔹 Prototype: void print_rev(char *s);
-5. rev_string (5-rev_string.c)
+Tasks Overview
+0. 98 Battery St.
 
-💡 Mission: Flip the script!
-A function that reverses a string in place.
-🔹 Prototype: void rev_string(char *s);
-6. puts2 (6-puts2.c)
+📜 File: 0-reset_to_98.c
+✅ Task: Update a pointer's value to 98.
+🔹 Prototype: void reset_to_98(int *n)
+🔹 Example:
+c
 
-💡 Mission: Every other step counts!
-A function that prints every other character of a string, starting with the first.
-🔹 Prototype: void puts2(char *str);
-7. puts_half (7-puts_half.c)
+int n = 402;
+reset_to_98(&n); // n now equals 98
 
-💡 Mission: Half the battle!
-A function that prints the second half of a string.
-🔹 Prototype: void puts_half(char *str);
-8. print_array (8-print_array.c)
+1. Don't Swap Horses
 
-💡 Mission: Reveal the hidden numbers!
-A function that prints n elements of an array of integers.
-🔹 Prototype: void print_array(int *a, int n);
-9. _strcpy (9-strcpy.c)
+📜 File: 1-swap.c
+✅ Task: Swap values of two integers using pointers.
+🔹 Prototype: void swap_int(int *a, int *b)
+🔹 Example:
+c
 
-💡 Mission: Copy like a pro!
-A function that copies a string (including \0) from src to dest.
-🔹 Prototype: char *_strcpy(char *dest, char *src);
-🚀 Advanced Missions
-10. _atoi (100-atoi.c)
+int a = 98, b = 42;
+swap_int(&a, &b); // a=42, b=98
 
-💡 Mission: Unlock the secret number!
-A function that converts a string to an integer, handling +, -, and edge cases.
-🔹 Prototype: int _atoi(char *s);
-11. Keygen for 101-crackme (101-keygen.c)
+2. String Length
 
-💡 Mission: Crack the code!
-A program that generates random valid passwords for 101-crackme.
-🔹 Compile with:
-bash
+📜 File: 2-strlen.c
+✅ Task: Calculate string length without standard library.
+🔹 Prototype: int _strlen(char *s)
+🔹 Example:
+c
 
-gcc -Wall -pedantic -Werror -Wextra 101-keygen.c -o 101-keygen
+_strlen("Hello"); // returns 5
 
-⚡ How to Test
+3. I Do Not Fear Computers
 
-Each task has a main file for testing. Example for Task 0:
-bash
+📜 File: 3-puts.c
+✅ Task: Print string followed by newline using _putchar.
+🔹 Prototype: void _puts(char *str)
+🔹 Output:
 
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-reset_to_98.c -o 0-98
-./0-98
+I fear the lack of them - Isaac Asimov
 
-Output:
+4. Reverse Printing
 
-n=402  
-n=98  
+📜 File: 4-print_rev.c
+✅ Task: Print string in reverse.
+🔹 Prototype: void print_rev(char *s)
+🔹 Example:
+c
 
-Success! The value was updated via pointer!
-🏆 Final Words
+print_rev("Hello"); // prints "olleH"
 
-This journey through pointers, arrays, and strings sharpens your C skills to low-level mastery.
+5. String Reversal
 
-🔗 Repository: alx-low_level_programming
-📂 Directory: 0x05-pointers_arrays_strings
+📜 File: 5-rev_string.c
+✅ Task: Reverse a string in place.
+🔹 Prototype: void rev_string(char *s)
+🔹 Modifies Input:
+c
 
-Happy coding! 💻🔥
+char s[] = "School";
+rev_string(s); // s becomes "loohcS"
+
+6. Skip Printing
+
+📜 File: 6-puts2.c
+✅ Task: Print every other character.
+🔹 Prototype: void puts2(char *str)
+🔹 Example:
+c
+
+puts2("0123456789"); // prints "02468"
+
+7. Half String
+
+📜 File: 7-puts_half.c
+✅ Task: Print second half of string.
+🔹 Prototype: void puts_half(char *str)
+🔹 Handles Odd Lengths:
+c
+
+puts_half("01234"); // prints "34"
+
+8. Array Printing
+
+📜 File: 8-print_array.c
+✅ Task: Print n elements of an array.
+🔹 Prototype: void print_array(int *a, int n)
+🔹 Output Format:
+
+98, 402, -1024
+
+9. String Copy
+
+📜 File: 9-strcpy.c
+✅ Task: Copy string including null byte.
+🔹 Prototype: char *_strcpy(char *dest, char *src)
+🔹 Returns: Pointer to dest
+10. String to Integer (Advanced)
+
+📜 File: 100-atoi.c
+✅ Task: Convert string to integer with edge cases.
+🔹 Prototype: int _atoi(char *s)
+🔹 Handles:
+
+    Leading whitespace
+
+    Multiple +/- signs
+
+    Non-digit characters
+
+🔹 Example:
+c
+
+_atoi("  -+--123abc"); // returns -123
+
+11. Password Generator (Advanced)
+
+📜 File: 101-keygen.c
+✅ Task: Generate valid passwords for 101-crackme.
+🔹 Requirements:
+
+    Uses rand(), srand(), time()
+
+    Passes 101-crackme check
+
+🔹 Usage:
+sh
+
+./101-crackme "$(./101-keygen)"
+
+Key Takeaways
+
+✔ Mastered pointer arithmetic and dereferencing
+✔ Implemented string operations without standard library
+✔ Developed in-place array/string manipulation
+✔ Created advanced conversion algorithms
+✔ Built a password generator with random number generation
+
+🚀 Happy Coding!
