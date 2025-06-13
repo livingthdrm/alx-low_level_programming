@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,7 +11,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int len = 0, i;
 
-	while (*(src + len) != '\n')
+	while (*(src + len) != '\0')
 	{
 		len++;
 	}
@@ -23,5 +24,4 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	return (dest);
-	_putchar('\n');
 }
