@@ -3,6 +3,8 @@
 /**
  * _atoi - a function to convert a string to a number
  * @s: the string to convert
+ *
+ * Return: result * sign
  */
 
 int _atoi(char *s)
