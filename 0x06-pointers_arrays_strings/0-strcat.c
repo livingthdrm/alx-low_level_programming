@@ -3,7 +3,7 @@
 /**
  * *_strcat - a function to concatenate two strings together
  * @dest: the final destination pointer
- * @str: the source of the string
+ * @src: the source of the string
  *
  * Return: null pointer to string dest
  */
@@ -18,14 +18,13 @@ char *_strcat(char *dest, char *src)
 	}
 
 	i = 0;
-	len++;
 
 	while (*(src + i) != '\0')
 	{
-		*(dest + len) = *(src + i);
-		len++;
+		*(dest + len + i) = *(src + i);
 		i++;
 	}
+	(*(dest + len + i)) = '\0';
 
 	return (dest);
 }
