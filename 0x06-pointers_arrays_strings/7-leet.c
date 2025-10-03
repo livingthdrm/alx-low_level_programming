@@ -8,11 +8,24 @@
  */
 char *leet(char *s)
 {
-	int i = 0;
+	char input[] = "aeotlAEOTL";
+	char output[] = "4307143071";
+	int i = 0, j;
 
 	while (s[i] != '\0')
 	{
-		len++;
-	}
+		j = 0;
 
+		while (input[j] != '\0')
+		{
+			if (s[i] == input[j])
+			{
+				s[i] = output[j];
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (s);
 }
